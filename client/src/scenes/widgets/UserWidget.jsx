@@ -2,7 +2,6 @@ import {
     ManageAccountsOutlined,
     EditOutlined,
     LocationOnOutlined,
-    WorkOutLineOutlined,
 } from "@mui/icons-material";
 import { Box, Typography, Divider, useTheme } from "@mui/material";
 import UserImage from "components/UserImage";
@@ -23,7 +22,7 @@ const UserWidget = ( {userId, picturePath }) => {
 
     const getUser = async () => {
         const response = await fetch(
-            `http://localhost:3001/users/${userId}`,
+            `https://buzzhub-z3z9.onrender.com/users/${userId}`,
             {
                 method: 'GET',
                 headers: {Authorization: `Bearer ${token}`},
